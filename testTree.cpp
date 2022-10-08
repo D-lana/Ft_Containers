@@ -91,8 +91,15 @@ int main() {
 	//tree_1.insert(33);
 	//print(tree_1.getTree(), 0);
 	std::cout << "Size: " << tree_1.getSize() << std::endl;
-	std::cout << "Begin: " << tree_1.beginTree() << std::endl;
-	std::cout << "End: " << tree_1.endTree() << std::endl;
+	std::cout << "Begin: " << tree_1.beginTree().data << std::endl;
+	std::cout << "End: " << tree_1.endTree().data << std::endl;
+	std::cout << "Next: " << tree_1.nextNode(tree_1.beginTree()).data << std::endl;
+	std::cout << "Next: " << tree_1.nextNode(tree_1.nextNode(tree_1.nextNode(tree_1.nextNode(tree_1.nextNode(tree_1.beginTree()))))).data << std::endl;
+	std::cout << "Next: " << tree_1.nextNode(tree_1.endTree()).data << std::endl;
+	std::cout << "Next: " << tree_1.prevNode(tree_1.prevNode(tree_1.prevNode(tree_1.endTree()))).data << std::endl;
+	std::cout << "Next: " << tree_1.prevNode(tree_1.beginTree()).data << std::endl;
+	tree_1.remove(11);
+	tree_1.remove(11);
 	//printTree<int> tree_print = printTree<int>(*tree_1.getTree(), tree_1.getSize());
 	//std::cout << tree_print.getDeep() << std::endl;
 	//tree_print.recordList();
